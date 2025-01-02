@@ -181,6 +181,53 @@ SQL数据集
 
 系统自带了一个可用于为内置数据库执行SQL语句的简单工具类`org.datagear.web.util.DerbySqlClient`，可以在IDE中直接运行。注意：运行前需要先停止DataGear程序。
 
+## 入门
+##### 1\. 启动 
+下载完datagear-\[version\].zip后解压，进入`datagear-\[version\]`/目录，执行启动命令： Linux系统：
+```
+./startup.sh 
+```
+Windows系统： 
+```
+startup.bat 
+```
+启动前请确保已安装JDK 8+版本运行环境（点击[这里](http://www.datagear.tech/documentation/#installation)了解如何安装）。 
+系统初始会内置一个管理员用户，用户名为：admin，初始密码为：admin。 
+系统所有数据默认都存储在【操作系统用户主目录】`/.datagear`文件夹内，请在必要时做好此文件夹的备份工作。 
+程序文件夹内的`config/application.properties`文件中存储了常用系统配置，您可以根据实际需要修改它们， 比如：系统数据主目录、是否禁用匿名用户、是否禁用注册功能、系统端口号等，修改后需要重启才会生效。 
+##### 2\. 注册和登录 
+打开浏览器，输入DataGear服务地址 http://\[IP地址\]:50401 例如： http://localhost:50401 点击右上角的【登录】链接，在打开的页面内点击【注册】链接，打开注册页面，完成注册后，登录系统。
+##### 3\. 新建数据集 
+新建SQL数据集（可选） 
+点击主页左侧【数据源】导航，打开数据源管理页面，点击【+】按钮，添加一个数据源，例如MySQL：
+![](http://www.datagear.tech/static/quickstart/add-datasource.png?v=1) 
+点击主页左侧【数据集】导航，添加一个SQL数据集，执行【预览】后保存： 
+![](http://www.datagear.tech/static/quickstart/add-sql-dataset.png?v=1) 
+新建CSV数据集（可选） 
+点击主页左侧【数据集】导航，添加一个CSV数据集，执行【预览】后保存： 
+![](http://www.datagear.tech/static/quickstart/add-csv-dataset.png?v=1) 
+##### 4\. 新建图表 
+点击主页左侧【图表】导航，添加两个图表，一个柱状图，一个饼图（注意需点击选定数据集字段右侧的【+】按钮绑定数据标记）： 
+![](http://www.datagear.tech/static/quickstart/add-bar-chart.png?v=1) ![](http://www.datagear.tech/static/quickstart/add-pie-chart.png?v=1) 
+##### 5\. 展示图表 
+点击上述添加图表页面的【保存并展示】按钮，即可看到图表展示效果： 
+![](http://www.datagear.tech/static/quickstart/show-bar-chart.png?v=1) ![](http://www.datagear.tech/static/quickstart/show-pie-chart.png?v=1) 
+##### 6\. 新建看板 
+导入看板模板（可选）
+打开DataGear官网[【模板】](http://www.datagear.tech/template/)链接，下载一个看板模板，然后在系统【看板】管理页面， 点击【添加】右侧下拉菜单的【导入】条目，导入下载的模板，点击【设计】按钮，打开看板设计页面，点击【可视模式】按钮，绑定图表，如下图所示： 
+![](http://www.datagear.tech/static/screenshot/dashboard-impt-visual-mode.gif?v=2)新建空白看板（可选）
+点击主页左侧【看板】导航，点击【添加】按钮，填写名称后，点击【保存并设计】按钮，打开看板设计页面，点击【可视模式】按钮，插入标题、布局、图表后，设置颜色和样式，如下图所示： 
+![](http://www.datagear.tech/static/screenshot/dashboard-visual-mode.gif?v=2) 
+##### 7\. 展示看板 
+点击上述添加看板页面的【保存并展示】按钮，即可看到看板展示效果。 
+![](http://www.datagear.tech/static/screenshot/dashboard-impt-visual-mode-show.png?v=1) 
+![](http://www.datagear.tech/static/screenshot/dashboard-visual-mode-show.png?v=1) 
+##### 8\. 添加交互操作（高级功能，可选） 
+以上述新建空白看板为例，打开看板设计页面，切换至源码模式，插入HTML按钮元素，编写控制图表显示/隐藏的JavaScript脚本，如下所示： 
+![](http://www.datagear.tech/static/screenshot/dashboard-src-mode.gif?v=1) 
+保存并展示看板，交互效果如下所示： 
+![](http://www.datagear.tech/static/screenshot/dashboard-src-mode-show.gif?v=1)
+
 ## 版权和许可
 
 Copyright 2018-2023 datagear.tech
